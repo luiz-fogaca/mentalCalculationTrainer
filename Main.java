@@ -39,10 +39,23 @@ public class Main {
         }
 
         // Inclusão de problemas de multiplicação
-        System.out.println("Incluir subtração? s/n");
+        System.out.println("Incluir multiplicação? s/n");
         answer = in.nextLine().charAt(0);
         if (answer == 's') {
             operacoes += '*';
+        }
+
+        // Inclusão de problemas de divisão
+        System.out.println("Incluir divisão? s/n");
+        answer = in.nextLine().charAt(0);
+        if (answer == 's') {
+            operacoes += '/';
+            // Inclusão de problemas de subtração com resultado menor que 0
+            System.out.println("Incluir problemas cujo resultado não seja um inteiro? s/n");
+            answer = in.nextLine().charAt(0);
+            if (answer == 's') {
+                operacoes += '/';
+            }
         }
     }
 }
