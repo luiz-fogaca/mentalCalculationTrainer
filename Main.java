@@ -24,5 +24,18 @@ public class Main {
                 operacoes += '+';
             }
         }
+
+        // Inclusão de problemas de subtração
+        System.out.println("Incluir subtração? s/n");
+        answer = in.nextLine().charAt(0);
+        if (answer == 's') {
+            operacoes += '-';
+            // Inclusão de problemas de subtração com resultado menor que 0
+            System.out.println("Incluir problemas cujo resultado seja negativo? s/n");
+            answer = in.nextLine().charAt(0);
+            if (answer == 's') {
+                operacoes += '-';
+            }
+        }
     }
 }
