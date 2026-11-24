@@ -37,5 +37,12 @@ public class Main {
                 operacoes += '-';
             }
         }
+
+        // Inclusão de problemas de multiplicação
+        System.out.println("Incluir subtração? s/n");
+        answer = in.nextLine().charAt(0);
+        if (answer == 's') {
+            operacoes += '*';
+        }
     }
 }
