@@ -8,6 +8,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String operacoes = "";
         char answer;
+        int digits;
 
         // Título para o usuário
         System.out.println("TREINADOR DE CÁLCULO MENTAL");
@@ -23,6 +24,11 @@ public class Main {
             if (answer == 's') {
                 operacoes += '+';
             }
+
+            // Definição do número de dígitos para a primeira parcela da soma
+            System.out.println("Quantos dígitos para a primeira parcela?");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
         }
 
         // Inclusão de problemas de subtração
