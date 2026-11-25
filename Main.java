@@ -106,9 +106,4 @@ public class Main {
             }
         }
     }
-
-    public char chooseOperation(char[] operacoes) {
-        Random r = new Random();
-        return operacoes[r.nextInt(operacoes.length)];
-    }
 }
