@@ -18,15 +18,20 @@ public class Main {
         answer = in.nextLine().charAt(0);
         if (answer == 's') {
             operacoes += '+';
-            /* Inclusão de problemas de adição com "vai um" (quando a soma de algarismos de mesma casa decimal é igual ou maior que 10) */
+            /*
+             * Inclusão de problemas de adição com "vai um" (quando a soma de algarismos de
+             * mesma casa decimal é igual ou maior que 10)
+             */
             System.out.println("Incluir problemas com 'vai um'? s/n");
             answer = in.nextLine().charAt(0);
             if (answer == 's') {
                 operacoes += '+';
             }
-
-            // Definição do número de dígitos para a primeira parcela da soma
-            System.out.println("Quantos dígitos para a primeira parcela?");
+            // Definição do número de dígitos para as parcelas da adição
+            System.out.println("Quantos dígitos para a primeira parcela? (Escolha entre 1 e 9)");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
+            System.out.println("Quantos dígitos para a segunda parcela? (Escolha entre 1 e 9)");
             digits = in.nextInt();
             operacoes += String.valueOf(digits);
         }
@@ -42,6 +47,13 @@ public class Main {
             if (answer == 's') {
                 operacoes += '-';
             }
+            // Definição do número de dígitos para o minuendo e o subtraendo da subtração
+            System.out.println("Quantos dígitos para o minuendo? (escolha entre 1 e 9)");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
+            System.out.println("Quantos dígitos para o subtraendo? (escolha entre 1 e 9)");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
         }
 
         // Inclusão de problemas de multiplicação
@@ -49,6 +61,13 @@ public class Main {
         answer = in.nextLine().charAt(0);
         if (answer == 's') {
             operacoes += '*';
+            // Definição do número de dígitos para os fatores da multiplicação
+            System.out.println("Quantos dígitos para o minuendo? (escolha entre 1 e 9)");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
+            System.out.println("Quantos dígitos para o subtraendo? (escolha entre 1 e 9)");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
         }
 
         // Inclusão de problemas de divisão
@@ -56,12 +75,19 @@ public class Main {
         answer = in.nextLine().charAt(0);
         if (answer == 's') {
             operacoes += '/';
-            // Inclusão de problemas de subtração com resultado menor que 0
+            // Inclusão de problemas de divisão com quociente não inteiro
             System.out.println("Incluir problemas cujo resultado não seja um inteiro? s/n");
             answer = in.nextLine().charAt(0);
             if (answer == 's') {
                 operacoes += '/';
             }
+            // Definição do número de dígitos para o dividendo e o divisor da divisão
+            System.out.println("Quantos dígitos para o minuendo? (escolha entre 1 e 9)");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
+            System.out.println("Quantos dígitos para o subtraendo? (escolha entre 1 e 9)");
+            digits = in.nextInt();
+            operacoes += String.valueOf(digits);
         }
     }
 }
